@@ -1,6 +1,3 @@
-# author: Tiffany Timbers
-# date: 2020-02-23
-
 """Calculates and prints the square root of a given number.
 Usage: sqrt.py --n=<n>
 
@@ -15,6 +12,8 @@ opt = docopt(__doc__)
 
 def main(number):
   number = int(number)
+  if number < 0:
+        raise Exception("number should be positive")
   print(math.sqrt(number))
     
 
